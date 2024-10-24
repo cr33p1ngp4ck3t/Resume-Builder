@@ -42,7 +42,7 @@ function Skills() {
     newInput.addEventListener("keydown", function(press) {
         if (press.key === "Enter") {
             var added = document.createElement("div");
-            added.textContent = newInput.value;
+            skills.push(skillInput);
             document.getElementById("output-skill").appendChild(added);
             newInput.value = '';
         }
@@ -70,6 +70,7 @@ function generateResume() {
     const role = document.getElementById('role').value;
     const start_d = document.getElementById('start-d').value;
     const end_d = endDateInput.value;
+    const but = newPage.document.getElementById("printl")
 
     var newPage = window.open("", "_blank");
     newPage.document.write("<html><head><title>Resume</title><link rel='stylesheet' href='style.css'></head><body>");
@@ -107,11 +108,17 @@ function generateResume() {
                     </div>
                 </div>
             </div>
+            <div class="submit">
+                <button onclick="window.print()" id="printl">Print Resume</button>
+            </div>
         </main>`
         );
                 
     newPage.document.write("</body></html>");
     newPage.document.close();
+    setTimeout(() => {
+        newPage.print();
+    }, 2000);
 }
 
 generateButton.addEventListener("click", generateResume);
