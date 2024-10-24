@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div>
+                <div class="heading">Personal Information</div>
+                <div class="input-style">
+                    <input id="name" placeholder="Name" type="text">
+                    <input id="email" placeholder="Email" type="email">
+                    <input id="number" placeholder="Number" type="number">
+                    <input id="address" placeholder="Address" type="text">
+                </div>
+            </div>
+            <div>
+                <div class="heading">Profile Picture</div>
+                <input type="file" name="profile-img" id="pfp" accept="image/*">
+            </div>
+            <div class="input-style">
+                <div class="heading">Education</div>
+                <input id="school" type="text" placeholder="School">
+                <input id="degree" type="text" placeholder="Degree">
+                <input id="grad" type="text" placeholder="Graduation Year">
+            </div>
+            <div class="input-style">
+                <div class="heading">Work Experience</div>
+                <input placeholder="Company" type="text" id="company">
+                <input placeholder="Role" type="text" id="role">
+                <input placeholder="Start Date" type="text" id="start-d">
+                <input placeholder="End Date" type="text" id="end-d">
+            </div>
+            <input type="checkbox" id="check"> I am Currently Working
+            <div class="input-style" id="div-skill">
+                <div class="heading">Skills</div>
+                <input placeholder="Add Skill Name" type="text" id="skill">
+            </div>
+            <button class="input-style-1" id="add-button">Add</button>
+            <div id="output-skill" class="button-style">
+                <!-- output -->
+            </div>
+            <div id="error-message" style="color: red"></div>
+            <div class="submit" id="noted">
+                <button type="submit" id="generate">Generate</button>
+            </div>
+        </div>
+    </main>
+    <script src="./javascript.js"></script>
+</body>
+</html>
